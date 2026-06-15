@@ -38,7 +38,7 @@ namespace FinalKT_Tracing_Neyaskin
 
                 Tracer.TaskManagerTrace.TraceEvent(
                     TraceEventType.Stop,
-                    1,
+                    200,
                     $"Завершение AddTask. Добавлена задача \"{task.Title}\". Время: {sw.ElapsedMilliseconds} мс");
             });
         }
@@ -65,7 +65,7 @@ namespace FinalKT_Tracing_Neyaskin
 
                     Tracer.TaskManagerTrace.TraceEvent(
                         TraceEventType.Error,
-                        2,
+                        400,
                         $"Ошибка RemoveTask. Задача \"{title}\" не найдена. Время: {sw.ElapsedMilliseconds} мс");
 
                     throw new InvalidOperationException($"Задача \"{title}\" не найдена");
@@ -81,7 +81,7 @@ namespace FinalKT_Tracing_Neyaskin
 
                 Tracer.TaskManagerTrace.TraceEvent(
                     TraceEventType.Stop,
-                    3,
+                    200,
                     $"Завершение RemoveTask. Удалена задача \"{task.Title}\". Время: {sw.ElapsedMilliseconds} мс");
             });
         }
@@ -105,7 +105,7 @@ namespace FinalKT_Tracing_Neyaskin
 
                     Tracer.TaskManagerTrace.TraceEvent(
                         TraceEventType.Warning,
-                        4,
+                        204,
                         $"Список задач пуст. Время: {sw.ElapsedMilliseconds} мс");
 
                     Console.WriteLine("Список задач пуст.");
@@ -124,7 +124,7 @@ namespace FinalKT_Tracing_Neyaskin
 
                 Tracer.TaskManagerTrace.TraceEvent(
                     TraceEventType.Stop,
-                    5,
+                    200,
                     $"Завершение ListTasks. Всего задач: {_tasks.Count}. Время: {sw.ElapsedMilliseconds} мс");
             });
         }
